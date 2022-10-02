@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Stem into Steam
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+
+        <img class="logo" src="images/logo.svg" alt="logo">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#sec">Sobre</a></li>
+            <li><a href="#">Trabalhos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="./images/stars.png" id="stars">
+        <img src="./images/moon.png" id="moon">
+        <img src="./images/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Ciência em Arte...</h2>
+        <a href="./explorer/index.html" id="btn">Acessar</a>
+        <img src="./images/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Turning STEM into STEAM</h2>
+        <p>
+            Um objetivo da ciência aberta é disponibilizar informações científicas para todos,
+            e abordagens originais e inovadoras podem ser úteis para comunicar efetivamente informações científicas
+            a pessoas com diferentes origens culturais, socioeconômicas e étnicas. Seu desafio é desenvolver um método
+            criativo que use as artes para compartilhar e explicar o design, o processo e/ou os resultados científicos
+            de um projeto de pesquisa da NASA ou agência espacial parceira para o seu público - ou seja, desenvolver
+            uma abordagem que combine ciência, tecnologia, engenharia, artes e matemática (STEAM).</p>
+        <a href="./explorer/index.html" id="btn"
+            style="margin-left: 88%; margin-bottom: 10%; background-color: #ff0b0b; color: white; font-weight: 700;">>Acessar</a>
+
+    </div>
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header')
+
+        window.addEventListener('scroll', function () {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 1.05 + 'px';
+        })
+    </script>
+</body>
+
+</html>
